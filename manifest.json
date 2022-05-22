@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Bionic Reading Helper",
+    "short_name": "BionicReading",
+    "version": "0.0.1",
+    "description": "Applies the 'bionic reading' method on every English sentences.",
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["src/BionicReadingHelper.js"]
+        }
+    ],
+    "permissions": [
+        "contextMenus"
+    ],
+    "background": {
+        "scripts": [
+            "src/BionicReadingHelperBg.js"
+        ],
+        "persistent": true
+    }
+}
