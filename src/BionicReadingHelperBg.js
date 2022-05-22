@@ -1,6 +1,6 @@
-const onRequest = () => {
+const onRequest = (params) => {
     chrome.contextMenus.create({
-        title: 'Bionic Reading',
+        title: 'Bionic Reading > ' + params.host + params.path,
         type: 'normal',
         contexts: ['page'],
         onclick: setBionic,

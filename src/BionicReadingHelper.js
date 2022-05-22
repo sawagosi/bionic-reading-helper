@@ -106,7 +106,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
  */
 const func = () => {
     console.info('[Bionic Reading Helper is running...]')
-    const requestData = {action: 'createContextMenuItem'}
+    const requestData = {action: 'createContextMenuItem', host: location.host, path: location.pathname}
     chrome.runtime.sendMessage(requestData)
 }
 
